@@ -17,12 +17,12 @@ class CommandLineInteface
     Student.create_from_collection(students_array)
   end
 
-  def add_attributes_to_students
-    Student.all.each do |student|
-      attributes = Scraper.scrape_profile_page(BASE_PATH + student.profile_url)
-      student.add_student_attributes(attributes)
-    end
-  end
+  #def add_attributes_to_students
+  #  Student.all.each do |student|
+  #    attributes = Scraper.scrape_profile_page(BASE_PATH + student.profile_url)
+  #    student.add_student_attributes(attributes)
+  #  end
+  #end
 
   def display_students
     Student.all.each do |student|
