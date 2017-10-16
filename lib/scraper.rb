@@ -4,7 +4,6 @@ require 'pry'
 class Scraper
 
   def self.scrape_index_page(index_url)
-
     page = Nokogiri::HTML(open(index_url))
     students = []
     students_hash = {}
@@ -14,7 +13,6 @@ class Scraper
         :location => student.css("p.student-location").text,
         :profile_url => student.css("a").attribute("href").value
       }
-
       students << students_hash
     end
     students
